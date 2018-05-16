@@ -1,0 +1,31 @@
+class Fruit:
+
+   def __init__(self, name, price):
+       self.name = name
+       self.price = price
+
+
+   def __str__(self):
+       return “Name: {}, Price: {}“.format(self.name, self.price)
+
+
+banana = Fruit(“Banana”, 10)
+apple = Fruit(“Apple”, 5)
+strawberry = Fruit(“Strawberry”, 2)
+grape = Fruit(“Grape”, :sunglasses:
+watermelon = Fruit(“Watermelon”, 19)
+
+soldFruits = [banana, apple, strawberry, banana, apple, strawberry, banana, apple, watermelon, watermelon, grape, strawberry, apple]
+dict = dict()
+
+def count_the_total(list):
+   for fruit in list:
+       if fruit.name in dict:
+           dict[fruit.name] += fruit.price
+       else:
+           dict[fruit.name] = fruit.price
+
+   print(dict)
+
+
+count_the_total(soldFruits)

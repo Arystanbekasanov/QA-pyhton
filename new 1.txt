@@ -1,0 +1,21 @@
+names = ["Anna Mark", "Albany Alana Abdukarim", "ali bobur dabba hama"]
+
+def answer(name):
+    splittedName = name.split(" ")
+    last = splittedName.pop()
+
+    n = len(splittedName)
+    if n == 4:
+        first, middle = ' '.join(splittedName[:2]), ' '.join(splittedName[2:])
+    elif n == 3:
+        middleNames = splittedName[1:]
+        first, middle = splittedName[0], "{}. {}.".format(middleNames[0][0],middleNames[1][0])
+    elif n == 2:
+        first, middle = splittedName[0], "{}.".format(splittedName[0][0])
+    else:
+        return
+    back = "{} {} {}".format(first, middle, last)
+    print(back)
+
+
+answer(names[1])
